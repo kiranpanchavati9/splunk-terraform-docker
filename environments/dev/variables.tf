@@ -111,11 +111,6 @@ variable "instance_type" {
   type        = string
 }
 
-variable "key_name" {
-  description = "Key name to use for the EC2 instances"
-  type        = string
-}
-
 variable "ssh_port" {
   description = "SSH Port (Default: 22)"
   type        = number
