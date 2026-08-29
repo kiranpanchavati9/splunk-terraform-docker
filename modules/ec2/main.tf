@@ -14,7 +14,6 @@ resource "aws_instance" "instance" {
     var.tags
   )
 
-  user_data = file(each.value.user_data)
 }
 
 # Create a 300 GB EBS Volume for the instance
@@ -27,11 +26,6 @@ resource "aws_ebs_volume" "volume" {
   tags = merge(
     {
       Name = "${each.value.name}-volume"
-    },
-    var.tags
-  )
-}
-
 # Attach the EBS Volume to the instance
 resource "aws_volume_attachment" "attachment" {
   for_each = var.components
