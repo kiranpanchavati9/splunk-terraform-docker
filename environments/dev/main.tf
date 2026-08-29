@@ -26,7 +26,6 @@ module "splunk_ec2" {
   security_group_id    = module.splunk_security_group.security_group_id
   ami                  = var.ami
   instance_type        = var.instance_type
-  key_name             = var.key_name
   iam_instance_profile = module.splunk_iam.instance_profile_name
   tags                 = var.tags
 }
