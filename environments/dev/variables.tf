@@ -98,7 +98,6 @@ variable "components" {
   description = "Map of Splunk components to create EC2 instances for"
   type = map(object({
     name      = string
-    user_data = string
   }))
 }
 
