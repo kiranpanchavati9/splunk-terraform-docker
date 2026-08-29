@@ -2,7 +2,6 @@ variable "components" {
   description = "Splunk components"
   type = map(object({
     name      = string
-    user_data = string
   }))
 }
 
@@ -13,11 +12,6 @@ variable "ami" {
 
 variable "instance_type" {
   description = "Instance type to use for the EC2 instances"
-  type        = string
-}
-
-variable "key_name" {
-  description = "Key name to use for the EC2 instances"
   type        = string
 }
 
